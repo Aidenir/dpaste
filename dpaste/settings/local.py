@@ -9,13 +9,18 @@ MANAGERS = ADMINS
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'dpaste',
-        'USER': '',
-        'PASSWORD': '',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': '/dpaste.sqlite'
     }
 }
 
-SECRET_KEY = 'changeme'
+ALLOWED_HOSTS = (
+        '127.0.0.1',
+        'localhost',
+        'paste.viha.se',
+)
+
+
+SECRET_KEY = 'sdfasfaslkfjalksfj'
 
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
